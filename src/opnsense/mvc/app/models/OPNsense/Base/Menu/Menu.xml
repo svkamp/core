@@ -204,6 +204,15 @@
             <Plain VisibleName="Plain View" order="400" url="/diag_logs_filter_plain.php"/>
         </LogFiles>
     </Firewall>
+    <Storage order="50" cssClass="fa fa-area-chart">
+        <Disks order="100" VisibleName="Disk Manage" url="/disks_manage.php" cssClass="fa fa-line-chart fa-fw"/>
+        <Disks order="200" VisibleName="Disk Config" url="/disks_init.php" cssClass="fa fa-line-chart fa-fw"/>
+    </Storage>
+    <Virtualization order="50" cssClass="fa fa-area-chart">
+        <XEN order="20" VisibleName="XEN Virtualization" url="/vm_xen.php" cssClass="fa fa-line-chart fa-fw"/>
+        <XEN order="30" VisibleName="XEN HVM" url="/vm_xen_hvm.php" cssClass="fa fa-line-chart fa-fw"/>
+        <XEN order="40" VisibleName="XEN PV" url="/vm_xen_pv.php" cssClass="fa fa-line-chart fa-fw"/>
+    </Virtualization>
     <Services order="60" cssClass="fa fa-cog">
         <DHCP cssClass="fa fa-bullseye fa-fw">
             <Server order="100" url="/services_dhcp.php">
@@ -259,7 +268,7 @@
           <All url="/status_services.php?*" visibility="hidden"/>
         </Diagnostics>
     </Services>
-    <VPN order="50" cssClass="fa fa-globe">
+    <VPN order="60" cssClass="fa fa-globe">
         <IPsec cssClass="fa fa-lock fa-fw" order="10">
             <Tunnels order="10" VisibleName="Tunnel Settings" url="/vpn_ipsec.php">
                 <Phase1 url="/vpn_ipsec_phase1.php*" visibility="hidden"/>
