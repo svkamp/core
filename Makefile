@@ -83,6 +83,7 @@ CORE_DEPENDS?=		apinger \
 			bsnmp-regex \
 			bsnmp-ucd \
 			ca_root_nss \
+			consul \
 			choparp \
 			cpustats \
 			dhcp6 \
@@ -104,6 +105,7 @@ CORE_DEPENDS?=		apinger \
 			mpd5 \
 			nginx-naxi \
 			ntp \
+			nomad \
 			openssh-portable \
 			openvpn \
 			opnsense-lang \
@@ -150,6 +152,7 @@ CORE_DEPENDS?=		apinger \
 			sx \
 			syslogd \
 			unbound \
+			vault \
 			wol \
 			zip
 
