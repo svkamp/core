@@ -91,6 +91,7 @@ CORE_DEPENDS?=		apinger \
 			expiretable \
 			filterdns \
 			filterlog \
+			freevrrp \
 			ifinfo \
 			flock \
 			flowd \
@@ -101,6 +102,7 @@ CORE_DEPENDS?=		apinger \
 			lighttpd \
 			miniupnpd \
 			mpd5 \
+			nginx-naxi \
 			ntp \
 			openssh-portable \
 			openvpn \
@@ -133,9 +135,11 @@ CORE_DEPENDS?=		apinger \
 			py${CORE_PY}-requests \
 			py${CORE_PY}-sqlite3 \
 			py${CORE_PY}-ujson \
+			quagga \
 			radvd \
 			rate \
 			relayd \
+			restic \
 			rrdtool12 \
 			samplicator \
 			squid \
@@ -143,6 +147,7 @@ CORE_DEPENDS?=		apinger \
 			strongswan \
 			sudo \
 			suricata \
+			sx \
 			syslogd \
 			unbound \
 			wol \
