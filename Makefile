@@ -92,7 +92,7 @@ CORE_DEPENDS?=		apinger \
 			expiretable \
 			filterdns \
 			filterlog \
-			freevrrp \
+			freevrrpd \
 			ifinfo \
 			flock \
 			flowd \
@@ -103,7 +103,7 @@ CORE_DEPENDS?=		apinger \
 			lighttpd \
 			miniupnpd \
 			mpd5 \
-			nginx-naxi \
+			nginx-naxsi \
 			ntp \
 			nomad \
 			openssh-portable \
