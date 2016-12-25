@@ -39,12 +39,12 @@ $g = array(
     'factory_shipped_password' => 'opnsense',
     'dhcpd_chroot_path' => '/var/dhcpd',
     'unbound_chroot_path' => '/var/unbound',
-    'product_name' => 'OPNsense',
-    'product_website' => 'https://opnsense.org/',
-    'product_email' => 'project@opnsense.org',
-    'product_copyright_owner' => 'Deciso B.V.',
-    'product_copyright_years' => '2014-2016',
-    'product_copyright_url' => 'https://www.deciso.com/',
+    'product_name' => 'OptimStor',
+    'product_website' => 'https://www.optimcloud.com/',
+    'product_email' => 'project@optimcloud.com',
+    'product_copyright_owner' => 'Optim Enterprises, Inc.',
+    'product_copyright_years' => '2013-2016',
+    'product_copyright_url' => 'https://www.optimcloud.com/',
 );
 
 require_once("xmlparse.inc");
