@@ -139,6 +139,30 @@ function system_api_disk()
     return $result;
 }
 
+function system_api_pool()
+{
+    $result['devices'] = array();
+    exec("/sbin/zpool iostat", $disk_info);
+    foreach ($disk_info as $line) {
+        if (strpos($line,'Mounted on') === false) {
+            $parts = preg_split('/\s+/', $line);
+            $diskItem = array();
+            $diskItem['pool'] = $parts[0];
+            $diskItem['alloc'] = $parts[1];
+            $diskItem['free'] = $parts[2];
+            $diskItem['read'] = $parts[3];
+            $diskItem['write'] = $parts[4];
+            $diskItem['read'] = $parts[5];
+            $diskItem['write'] = $parts[6];
+            $result['devices'][] = $diskItem;
+        }
+    }
+    
+    
+    return $result;
+}
+
+
 function system_api_versions()
 {
     global $g;

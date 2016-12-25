@@ -250,5 +250,21 @@ require_once("system.inc");
           </div>
       </td>
     </tr>
+    <tr>
+      <td><?=gettext("Disk IO");?></td>
+      <td id="system_information_widget_disk">
+          <div style="display:none" class="disk_template">
+            <!-- template -->
+            <div id="disk_id_sequence" class="progress" style="text-align:center;">
+              <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%; z-index: 0;"></div>
+              <span class="state_text" style="position:absolute;right:0;left:0;"></span>
+            </div>
+            <div style="height:1px;">
+            </div>
+          </div>
+          <div class="disk_devices">
+          </div>
+      </td> 
+    </tr>
   </tbody>
 </table>
