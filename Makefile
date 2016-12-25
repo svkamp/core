@@ -153,6 +153,7 @@ CORE_DEPENDS?=		apinger \
 			syslogd \
 			unbound \
 			vault \
+			vm-bhyve \
 			wol \
 			zip
 
