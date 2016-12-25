@@ -1,0 +1,5 @@
+<menu>
+    <Services>
+        <iSCSI url="/services_iscsi.php" cssClass="fa fa-database fa-fw"/>
+    </Services>
+</menu>

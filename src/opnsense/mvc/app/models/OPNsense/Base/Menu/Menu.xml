@@ -204,15 +204,50 @@
             <Plain VisibleName="Plain View" order="400" url="/diag_logs_filter_plain.php"/>
         </LogFiles>
     </Firewall>
-    <Storage order="50" cssClass="fa fa-area-chart">
-        <Disks order="100" VisibleName="Disk Manage" url="/disks_manage.php" cssClass="fa fa-line-chart fa-fw"/>
-        <Disks order="200" VisibleName="Disk Config" url="/disks_init.php" cssClass="fa fa-line-chart fa-fw"/>
+    <Data order="50" cssClass="fa fa-database fa-fw">
+            <Disks url="/system_certmanager.php">
+                <workAround url="/system_certmanager.php*" visibility="hidden"/>
+            </Disks>
+            <Pools url="/system_camanager.php">
+                <workAround url="/system_camanager.php*" visibility="hidden"/>
+            </Pools>
+            <Volumes url="/system_crlmanager.php">
+                <workAround url="/system_crlmanager.php*" visibility="hidden"/>
+            </Volumes>
+    </Data>
+    <Storage order="50" cssClass="fa fa-database fa-fw">
+            <Disks url="/system_certmanager.php">
+                <workAround url="/system_certmanager.php*" visibility="hidden"/>
+            </Disks>
+            <Pools url="/system_camanager.php">
+                <workAround url="/system_camanager.php*" visibility="hidden"/>
+            </Pools>
+            <Volumes url="/system_crlmanager.php">
+                <workAround url="/system_crlmanager.php*" visibility="hidden"/>
+            </Volumes>
     </Storage>
     <Virtualization order="50" cssClass="fa fa-area-chart">
-        <XEN order="20" VisibleName="XEN Virtualization" url="/vm_xen.php" cssClass="fa fa-line-chart fa-fw"/>
-        <XEN order="30" VisibleName="XEN HVM" url="/vm_xen_hvm.php" cssClass="fa fa-line-chart fa-fw"/>
-        <XEN order="40" VisibleName="XEN PV" url="/vm_xen_pv.php" cssClass="fa fa-line-chart fa-fw"/>
+            <XEN order="20" url="/system_certmanager.php">
+                <workAround url="/system_certmanager.php*" visibility="hidden"/>
+            </XEN>
+            <Bhyve order="30" url="/system_camanager.php">
+                <workAround url="/system_camanager.php*" visibility="hidden"/>
+            </Bhyve>
+            <Docker order="40" url="/system_crlmanager.php">
+                <workAround url="/system_crlmanager.php*" visibility="hidden"/>
+            </Docker>
     </Virtualization>
+    <Backup order="55" cssClass="fa fa-medkit fa-fw">
+            <Restic order="20" url="/system_certmanager.php">
+                <workAround url="/system_certmanager.php*" visibility="hidden"/>
+            </Restic>
+            <RClone order="30" url="/system_crlmanager.php">
+                <workAround url="/system_crlmanager.php*" visibility="hidden"/>
+            </RClone>
+            <TarSNAP order="40" url="/system_camanager.php">
+                <workAround url="/system_camanager.php*" visibility="hidden"/>
+            </TarSNAP>
+    </Backup>
     <Services order="60" cssClass="fa fa-cog">
         <DHCP cssClass="fa fa-bullseye fa-fw">
             <Server order="100" url="/services_dhcp.php">

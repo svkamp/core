@@ -1,0 +1,5 @@
+<menu>
+    <Services>
+        <NFS url="/services_nfs.php" cssClass="fa fa-database fa-fw"/>
+    </Services>
+</menu>
