@@ -1,0 +1,14 @@
+secadm {
+pax {
+        path: "/usr/local/bin/php-cgi",
+        mprotect: false,
+        pageexec: false,
+        segvguard: false,
+},
+pax {
+        path: "/usr/local/bin/php",
+        mprotect: false,
+        pageexec: false,
+        segvguard: false,
+}
+}
