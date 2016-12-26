@@ -17,7 +17,7 @@ HOME=/
 PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin:/usr/local/sbin
 export HOME PATH
 
-/sbin/secadm load /etc/secadm.rules
+/sbin/secadm load /usr/local/etc/secadm.rules
 
 echo "Mounting filesystems..."
 
