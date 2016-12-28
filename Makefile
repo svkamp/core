@@ -106,7 +106,9 @@ CORE_DEPENDS?=		apinger \
 			isc-dhcp43-server \
 			lighttpd \
 			miniupnpd \
+			mosh \
 			mpd5 \
+			netatalk3 \
 			nginx-naxsi \
 			ntp \
 			nomad \
@@ -147,6 +149,7 @@ CORE_DEPENDS?=		apinger \
 			relayd \
 			restic \
 			rrdtool12 \
+			samba44 \
 			samplicator \
 			squid \
 			sshlockout_pf \
@@ -159,6 +162,7 @@ CORE_DEPENDS?=		apinger \
 			vault \
 			vm-bhyve \
 			wol \
+			zephir \
 			zip
 
 WRKDIR?=${.CURDIR}/work
