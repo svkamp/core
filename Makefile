@@ -108,7 +108,6 @@ CORE_DEPENDS?=		apinger \
 			miniupnpd \
 			mosh \
 			mpd5 \
-			netatalk3 \
 			nginx-naxsi \
 			ntp \
 			nomad \
