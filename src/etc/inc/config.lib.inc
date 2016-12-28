@@ -36,12 +36,12 @@ global $g; /* XXX make this a getter function for traceability */
 
 $g = array(
     'factory_shipped_username' => 'root',
-    'factory_shipped_password' => 'opnsense',
+    'factory_shipped_password' => 'optimstor',
     'dhcpd_chroot_path' => '/var/dhcpd',
     'unbound_chroot_path' => '/var/unbound',
     'product_name' => 'OptimStor',
     'product_website' => 'https://www.optimcloud.com/',
-    'product_email' => 'project@optimcloud.com',
+    'product_email' => 'optimstor@optimcloud.com',
     'product_copyright_owner' => 'Optim Enterprises, Inc.',
     'product_copyright_years' => '2013-2016',
     'product_copyright_url' => 'https://www.optimcloud.com/',
