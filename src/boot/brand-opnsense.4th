@@ -33,14 +33,14 @@
 	1+ \ increase y for next time we're called
 ;
 
-: brand ( x y -- ) \ "OPNsense" [wide] logo in B/W (6 rows x 47 columns)
+: brand ( x y -- ) \ "OptimStor" [wide] logo in B/W (6 rows x 50 columns)
 
-	s"  ______  _____  _____                         " brand+
-	s" /  __  |/ ___ |/ __  |                        " brand+
-	s" | |  | | |__/ | |  | |___  ___ _ __  ___  ___ " brand+
-	s" | |  | |  ___/| |  | / __|/ _ \ '_ \/ __|/ _ \" brand+
-	s" | |__| | |    | |  | \__ \  __/ | | \__ \  __/" brand+
-	s" |_____/|_|    |_| /__|___/\___|_| |_|___/\___|" brand+
+	s"   ____        __  _          _____ __            
+        s"  / __ \____  / /_(_)___ ___ / ___// /_____  _____" brand+
+        s" / / / / __ \/ __/ / __ `__ \\__ \/ __/ __ \/ ___/" brand+
+        s"/ /_/ / /_/ / /_/ / / / / / /__/ / /_/ /_/ / /    " brand+
+        s"\____/ .___/\__/_/_/ /_/ /_/____/\__/\____/_/     " brand+
+        s"    /_/                                           " brand+
 
 	2drop
 ;
