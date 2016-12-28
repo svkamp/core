@@ -90,6 +90,7 @@ CORE_DEPENDS?=		apinger \
 			consul \
 			choparp \
 			cpustats \
+			cyrus-sasl2-gssapi \
 			dhcp6 \
 			dhcpleases \
 			dnsmasq \
@@ -115,6 +116,7 @@ CORE_DEPENDS?=		apinger \
 			openvpn \
 			opnsense-lang \
 			opnsense-update \
+			pam_mkhomedir \
 			pam_opnsense \
 			pecl-radius \
 			pftop \
@@ -151,6 +153,7 @@ CORE_DEPENDS?=		apinger \
 			samba44 \
 			samplicator \
 			squid \
+			sssd \
 			sshlockout_pf \
 			strongswan \
 			sudo \
