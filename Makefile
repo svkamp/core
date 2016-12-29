@@ -41,18 +41,12 @@ CORE_VERSION=	${CORE_COMMIT:C/-.*$//1}
 CORE_HASH=	${CORE_COMMIT:C/^.*-//1}
 .endif
 
-CORE_ABI?=	16.7
+CORE_ABI?=	17.1
 CORE_ARCH?=	${ARCH}
 CORE_PY?=	27
 
-.if ${CORE_ABI} == 16.7
-CORE_BIND?=	910
-CORE_PHP_SUHOSIN=php-suhosin
-CORE_PHP?=	56
-.else
 CORE_BIND?=	911
 CORE_PHP?=	70
-.endif
 
 .if "${CORE_RELEASE}" == yes
 CORE_NAME?=		opnsense
@@ -83,7 +77,7 @@ CORE_MESSAGE?=		Thanks for all the fish...
 CORE_DEPENDS_amd64?=	beep bsdinstaller
 CORE_DEPENDS_i386?=	${CORE_DEPENDS_amd64}
 CORE_DEPENDS?=		apinger \
-			bind${CORE_BIND} \
+			bind911 \
 			bsnmp-regex \
 			bsnmp-ucd \
 			ca_root_nss \
