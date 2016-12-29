@@ -113,7 +113,7 @@ CORE_DEPENDS?=		apinger \
 			ntp \
 			nomad \
 			openssh-portable \
-			openvpn \
+			openvpn23 \
 			opnsense-lang \
 			opnsense-update \
 			pam_mkhomedir \
