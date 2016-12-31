@@ -84,7 +84,6 @@ CORE_DEPENDS?=		apinger \
 			consul \
 			choparp \
 			cpustats \
-			cyrus-sasl2-gssapi \
 			dhcp6 \
 			dhcpleases \
 			dnsmasq \
