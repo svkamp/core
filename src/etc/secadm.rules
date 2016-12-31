@@ -11,4 +11,11 @@ pax {
         pageexec: false,
         segvguard: false,
 }
+pax {
+	path: "/usr/local/bin/suricata",
+	mprotect: false,
+	pageexec: false
+}
+
+	.include "/usr/local/etc/secadm.integriforce.rules"
 }
