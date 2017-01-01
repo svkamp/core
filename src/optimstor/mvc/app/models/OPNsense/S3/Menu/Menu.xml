@@ -1,0 +1,5 @@
+<menu>
+    <Services>
+        <S3 url="/services_s3.php" cssClass="fa fa-database fa-fw"/>
+    </Services>
+</menu>

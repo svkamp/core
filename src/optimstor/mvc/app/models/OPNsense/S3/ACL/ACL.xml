@@ -1,0 +1,8 @@
+<acl>
+    <page-services-s3>
+        <name>Data: S3</name>
+        <patterns>
+            <pattern>services_s3.php*</pattern>
+        </patterns>
+    </page-services-s3>
+</acl>

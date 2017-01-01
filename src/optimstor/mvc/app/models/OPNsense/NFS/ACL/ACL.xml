@@ -1,0 +1,8 @@
+<acl>
+    <page-services-nfs>
+        <name>Data: NFS</name>
+        <patterns>
+            <pattern>services_nfs.php*</pattern>
+        </patterns>
+    </page-services-nfs>
+</acl>

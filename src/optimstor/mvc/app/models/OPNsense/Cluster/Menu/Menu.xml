@@ -1,0 +1,5 @@
+<menu>
+    <Services>
+        <ClusterFS url="/services_cluster.php" cssClass="fa fa-database fa-fw"/>
+    </Services>
+</menu>

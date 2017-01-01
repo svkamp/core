@@ -1,0 +1,5 @@
+<menu>
+    <Services>
+        <Fiber url="/services_fc.php" cssClass="fa fa-database fa-fw"/>
+    </Services>
+</menu>
