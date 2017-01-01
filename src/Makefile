@@ -1,4 +1,4 @@
-TREES=		boot etc opnsense sbin lib wizard www
+TREES=		boot etc opnsense optimstore sbin lib wizard www
 ROOT=		/usr/local
 ROOT_boot=	/
 

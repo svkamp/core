@@ -49,7 +49,7 @@ CORE_BIND?=	911
 CORE_PHP?=	70
 
 .if "${CORE_RELEASE}" == yes
-CORE_NAME?=		opnsense
+CORE_NAME?=		optimstor
 CORE_FAMILY?=		release
 .endif
 
@@ -64,14 +64,14 @@ CORE_REPOSITORY?=	${CORE_ABI}/libressl
 CORE_REPOSITORY?=	${FLAVOUR}
 .endif
 
-CORE_PACKAGESITE?=	http://pkg.opnsense.org
+CORE_PACKAGESITE?=	http://pkg.optimcloud.com
 
-CORE_NAME?=		opnsense-devel
+CORE_NAME?=		optimstor-devel
 CORE_FAMILY?=		development
-CORE_ORIGIN?=		opnsense/${CORE_NAME}
+CORE_ORIGIN?=		optimstor/${CORE_NAME}
 CORE_COMMENT?=		OPNsense ${CORE_FAMILY} package
-CORE_MAINTAINER?=	franco@opnsense.org
-CORE_WWW?=		https://opnsense.org/
+CORE_MAINTAINER?=	scottk@optimcloud.com
+CORE_WWW?=		https://optimcloud.com/
 CORE_MESSAGE?=		Thanks for all the fish...
 # CORE_DEPENDS_armv6 is empty
 CORE_DEPENDS_amd64?=	beep bsdinstaller
@@ -168,7 +168,7 @@ mount: want-git
 	@if [ ! -f ${WRKDIR}/.mount_done ]; then \
 	    echo -n "Enabling core.git live mount..."; \
 	    echo "${CORE_COMMIT}" > \
-	        ${.CURDIR}/src/opnsense/version/opnsense; \
+	        ${.CURDIR}/src/optimstor/version/optimstor; \
 	    mount_unionfs ${.CURDIR}/src ${LOCALBASE}; \
 	    touch ${WRKDIR}/.mount_done; \
 	    echo "done"; \
@@ -179,7 +179,7 @@ umount: force
 	@if [ -f ${WRKDIR}/.mount_done ]; then \
 	    echo -n "Disabling core.git live mount..."; \
 	    umount -f "<above>:${.CURDIR}/src"; \
-	    rm ${.CURDIR}/src/opnsense/version/opnsense; \
+	    rm ${.CURDIR}/src/optimstor/version/optimstore; \
 	    rm ${WRKDIR}/.mount_done; \
 	    echo "done"; \
 	    service configd restart; \
@@ -280,7 +280,7 @@ package: package-check
 
 upgrade-check: force
 	@if ! ${PKG} info ${CORE_NAME} > /dev/null; then \
-		echo ">>> Cannot find package.  Please run 'opnsense-update -t ${CORE_NAME}'" >&2; \
+		echo ">>> Cannot find package.  Please run 'optimstor-update -t ${CORE_NAME}'" >&2; \
 		exit 1; \
 	fi
 	@rm -rf ${PKGDIR}
@@ -319,7 +319,7 @@ sweep: force
 	    xargs -0 -n1 ${.CURDIR}/Scripts/cleanfile
 
 style: want-pear-PHP_CodeSniffer
-	@(phpcs --standard=ruleset.xml ${.CURDIR}/src/opnsense \
+	@(phpcs --standard=ruleset.xml ${.CURDIR}/src/optimstor \
 	    || true) > ${.CURDIR}/.style.out
 	@echo -n "Total number of style warnings: "
 	@grep '| WARNING' ${.CURDIR}/.style.out | wc -l
@@ -329,7 +329,7 @@ style: want-pear-PHP_CodeSniffer
 	@rm ${.CURDIR}/.style.out
 
 style-fix: want-pear-PHP_CodeSniffer
-	phpcbf --standard=ruleset.xml ${.CURDIR}/src/opnsense || true
+	phpcbf --standard=ruleset.xml ${.CURDIR}/src/optimstore || true
 
 setup: force
 	${.CURDIR}/src/etc/rc.php_ini_setup
@@ -339,7 +339,7 @@ health: force
 	[ "`${.CURDIR}/src/etc/rc.php_test_run`" == "FCGI-PASSED PASSED" ]
 
 test: want-phpunit
-	@cd ${.CURDIR}/src/opnsense/mvc/tests && \
+	@cd ${.CURDIR}/src/optimstore/mvc/tests && \
 	    phpunit --configuration PHPunit.xml
 
 clean: want-git
