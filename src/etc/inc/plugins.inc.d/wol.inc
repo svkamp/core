@@ -1,7 +1,7 @@
 <?php
 
 /*
-    Copyright (C) 2016 Deciso B.V.
+    Copyright (C) 2016 Franco Fichtner <franco@opnsense.org>
     All rights reserved.
 
     Redistribution and use in source and binary forms, with or without
@@ -26,46 +26,16 @@
     POSSIBILITY OF SUCH DAMAGE.
 */
 
-function squid_services()
-{
-    global $config;
-
-    $services = array();
-
-    if (isset($config['OPNsense']['proxy']['general']['enabled']) && $config['OPNsense']['proxy']['general']['enabled'] == 1) {
-        $services[] = array(
-            'description' => gettext('Web Proxy'),
-            'configd' => array(
-                'restart' => array('proxy restart'),
-                'start' => array('proxy start'),
-                'stop' => array('proxy stop'),
-            ),
-            'name' => 'squid',
-        );
-    }
-
-    return $services;
-}
-
-function squid_syslog()
-{
-    $logfacilities = array();
-    $logfacilities['squid.syslog'] = array(
-        'facility' => array('(squid-1)')
-    );
-
-    return $logfacilities;
-}
-
-function squid_xmlrpc_sync()
+function wol_xmlrpc_sync()
 {
     $result = array();
 
     $result[] = array(
-        'description' => gettext('Web Proxy'),
-        'section' => 'OPNsense.proxy',
-        'id' => 'squid',
+        'description' => gettext('Wake on LAN'),
+        'section' => 'wol',
+        'id' => 'wol',
     );
 
     return $result;
 }
+

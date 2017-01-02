@@ -43,7 +43,7 @@ $g = array(
     'product_website' => 'https://www.optimcloud.com/',
     'product_email' => 'optimstor@optimcloud.com',
     'product_copyright_owner' => 'Optim Enterprises, Inc.',
-    'product_copyright_years' => '2013-2016',
+    'product_copyright_years' => '2013-2017',
     'product_copyright_url' => 'https://www.optimcloud.com/',
 );
 
