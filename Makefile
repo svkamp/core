@@ -80,6 +80,7 @@ CORE_DEPENDS?=		apinger \
 			bind911 \
 			bsnmp-regex \
 			bsnmp-ucd \
+			bind${CORE_BIND} \
 			ca_root_nss \
 			consul \
 			choparp \
@@ -94,7 +95,6 @@ CORE_DEPENDS?=		apinger \
 			ifinfo \
 			flock \
 			flowd \
-			igmpproxy \
 			isc-dhcp43-client \
 			isc-dhcp43-relay \
 			isc-dhcp43-server \
