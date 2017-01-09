@@ -199,19 +199,21 @@ function legacy_interface_stats($ifs=null)
  * @param $intf filter on interface name (empty for all)
  * @return array list of interface specifics indexed by physical interface name
  */
-function legacy_interfaces_details($intf=null)
+function legacy_interfaces_details($intf = null)
 {
     $result = array();
+
     if (!empty($intf)) {
         $tmp_intf = escapeshellarg($intf);
     } else {
-        $tmp_intf = "";
+        $tmp_intf = '';
     }
+
     $cmd = '/sbin/ifconfig -m ' . $tmp_intf;
     exec($cmd . ' 2>&1', $ifconfig_data, $ret);
     if ($ret) {
-        log_error('The command `' . $cmd . '\' failed to execute ' . implode(' ', $ifconfig_data) );
-        return array();
+        log_error('The command `' . $cmd . '\' failed to execute ' . implode(' ', $ifconfig_data));
+        return $result;
     }
 
     $current_interface = null;
@@ -331,9 +333,14 @@ function legacy_getall_interface_addresses($ifs)
 {
     $result = array();
     $intf_details = legacy_interface_details($ifs);
-    foreach (array("ipv4", "ipv6") as $proto) {
+    foreach (array('ipv4', 'ipv6') as $proto) {
+        if (empty($intf_details[$proto])) {
+            continue;
+        }
         foreach ($intf_details[$proto] as $address) {
-            $result[] = $address['ipaddr'] . "/" . $address['subnetbits'];
+            if (!empty($address['ipaddr']) && !empty($address['subnetbits'])) {
+                $result[] = $address['ipaddr'] . '/' . $address['subnetbits'];
+            }
         }
     }
     return $result;
@@ -343,11 +350,11 @@ function legacy_get_interface_addresses($ifs)
 {
     $intf_details = legacy_interface_details($ifs);
     $addrs = array("macaddr" => $intf_details['macaddr']);
-    if (!empty($intf_details['ipv4'])) {
+    if (!empty($intf_details['ipv4'][0])) {
         $addrs['ipaddr'] = $intf_details['ipv4'][0]['ipaddr'];
         $addrs['subnetbits'] = $intf_details['ipv4'][0]['subnetbits'];
     }
-    if (!empty($intf_details['ipv6']) && empty($intf_details['ipv6'][0]['link-local'])) {
+    if (!empty($intf_details['ipv6'][0]) && empty($intf_details['ipv6'][0]['link-local'])) {
         $addrs['ipaddr6'] = $intf_details['ipv6'][0]['ipaddr'];
         $addrs['subnetbits6'] = $intf_details['ipv6'][0]['subnetbits'];
     }
