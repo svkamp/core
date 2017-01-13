@@ -17,5 +17,5 @@ pax {
 	pageexec: false
 }
 
-	.include "/usr/local/etc/secadm.integriforce.rules"
+#	.include "/usr/local/etc/secadm.integriforce.rules"
 }
